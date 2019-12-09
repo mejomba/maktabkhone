@@ -10,6 +10,7 @@ list_maghsom2 = []
 list_maghsom_aval = []
 
 
+
 def aval(num):
     if num == 1:
         return None
