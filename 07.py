@@ -1,4 +1,3 @@
-
 class School(object):
     def __init__(self, tedad, sen, ghad, vazn):
         self.tedad = tedad
