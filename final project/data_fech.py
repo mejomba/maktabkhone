@@ -52,7 +52,11 @@ class Data_fetch(object):
                         car_name = ''
                         for z in c_name:
                             car_name += str(z).strip()
-                        pd = year.text.strip()
+                        x = year.text.strip()
+                        pd = ''
+                        for w in x:
+                            if str(w).isdigit():
+                                pd += w
                         print(f'name= {car_name}, cost=  {toman}, work=  {work}, pd= {pd}')
                         #return f"INSERT INTO {table_name} ({o.fields[0]}, {fields[1]}) values ('{toman}', '{work}');"
                     else:
@@ -64,8 +68,10 @@ class Data_fetch(object):
                         for z in c_name:
                             car_name += str(z).strip()
                         x = year.text.strip()
+                        pd = ''
                         for w in x:
-                            if str(x).isdigit():
+                            if str(w).isdigit():
+                                pd += w
 
                         print(f'name= {car_name}, cost=  {toman}, work=  {worke}, pd= {pd}')
                         #query = f"INSERT INTO {table_name} ({fields[0]}, {fields[1]}) values ('{toman}', '{worke}');"
