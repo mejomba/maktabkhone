@@ -21,6 +21,9 @@ class School(object):
         print(self.__sen_mid())
         print(self.__ghad_mid())
         print(self.__vazn_mid())
+
+
+    def up(self):
         if a.__ghad_mid() > b.__ghad_mid():
             print('A')
         elif a.__ghad_mid() < b.__ghad_mid():
@@ -77,3 +80,4 @@ b = School(tedad_b, sen_b, ghad_b, vazn_b)
 
 a.info()
 b.info()
+a.up()

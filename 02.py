@@ -29,6 +29,7 @@
 2-1
 '''
 
+
 def contest(r, t):
     spain_wins = 0
     spain_lose = 0
@@ -57,34 +58,34 @@ def contest(r, t):
                 spain_draws += 1
                 iran_points += 1
                 spain_points += 1
-                iran_goal_difference += 0
-                spain_goal_difference += 0
+                #iran_goal_difference += 0
+                #spain_goal_difference += 0
                 #list_result.remove(r[0])
                 t.remove(t[0])
             elif int(result_list[0]) > int(result_list[1]):
                 iran_wins += 1
                 spain_lose += 1
                 iran_points += 3
-                spain_points += 0
+                #spain_points += 0
                 iran_goal_difference += int(result_list[0]) - int(result_list[1])
                 spain_goal_difference += int(result_list[1]) - int(result_list[0])
-                #list_result.remove(r[0])
                 t.remove(t[0])
+
             elif int(result_list[0]) < int(result_list[1]):
                 spain_wins += 1
                 iran_lose += 1
-                iran_points += 0
+                #iran_points += 0
                 spain_points += 3
                 spain_goal_difference += int(result_list[1]) - int(result_list[0])
                 iran_goal_difference += int(result_list[0]) - int(result_list[1])
-                #list_result.remove(r[0])
                 t.remove(t[0])
+
         elif t[0][0] == 'iran' and t[0][1] == 'portugal':
             if int(result_list[0]) == int(result_list[1]):
                 iran_draws += 1
                 portugal_draws += 1
                 portugal_points += 1
-                iran_points +=1
+                iran_points += 1
                 #list_result.remove(r[0])
                 t.remove(t[0])
             elif int(result_list[0]) > int(result_list[1]):
@@ -108,7 +109,7 @@ def contest(r, t):
                 iran_draws += 1
                 morocco_draws += 1
                 morocco_points += 1
-                iran_points +=1
+                iran_points += 1
                 #list_result.remove(r[0])
                 t.remove(t[0])
             elif int(result_list[0]) > int(result_list[1]):
@@ -132,56 +133,55 @@ def contest(r, t):
                 spain_draws += 1
                 portugal_draws += 1
                 portugal_points += 1
-                spain_points +=1
-                #list_result.remove(r[0])
+                spain_points += 1
                 t.remove(t[0])
+
             elif int(result_list[0]) > int(result_list[1]):
                 spain_wins += 1
                 portugal_lose += 1
                 spain_points += 3
                 spain_goal_difference += int(result_list[0]) - int(result_list[1])
                 portugal_goal_difference += int(result_list[1]) - int(result_list[0])
-                #list_result.remove(r[0])
                 t.remove(t[0])
+
             elif int(result_list[0]) < int(result_list[1]):
                 portugal_wins += 1
                 spain_lose += 1
                 portugal_points += 3
                 spain_goal_difference += int(result_list[0]) - int(result_list[1])
                 portugal_goal_difference += int(result_list[1]) - int(result_list[0])
-                #list_result.remove(r[0])
                 t.remove(t[0])
+
         elif t[0][0] == 'spain' and t[0][1] == 'morocco':
             if int(result_list[0]) == int(result_list[1]):
                 spain_draws += 1
                 morocco_draws += 1
                 morocco_points += 1
                 spain_points += 1
-                #list_result.remove(r[0])
                 t.remove(t[0])
+
             elif int(result_list[0]) > int(result_list[1]):
                 spain_wins += 1
                 morocco_lose += 1
                 spain_points += 3
                 spain_goal_difference += int(result_list[0]) - int(result_list[1])
                 morocco_goal_difference += int(result_list[1]) - int(result_list[0])
-                #list_result.remove(r[0])
                 t.remove(t[0])
+
             elif int(result_list[0]) < int(result_list[1]):
                 morocco_wins += 1
                 spain_lose += 1
                 morocco_points += 3
                 spain_goal_difference += int(result_list[0]) - int(result_list[1])
                 morocco_goal_difference += int(result_list[1]) - int(result_list[0])
-                #list_result.remove(r[0])
                 t.remove(t[0])
+
         elif t[0][0] == 'portugal' and t[0][1] == 'morocco':
             if int(result_list[0]) == int(result_list[1]):
                 portugal_draws += 1
                 morocco_draws += 1
                 morocco_points += 1
-                portugal_draws += 1
-                #list_result.remove(r[0])
+                portugal_points += 1
                 t.remove(t[0])
             elif int(result_list[0]) > int(result_list[1]):
                 portugal_wins += 1
@@ -189,7 +189,6 @@ def contest(r, t):
                 portugal_points += 3
                 portugal_goal_difference += int(result_list[0]) - int(result_list[1])
                 morocco_goal_difference += int(result_list[1]) - int(result_list[0])
-                #list_result.remove(r[0])
                 t.remove(t[0])
             elif int(result_list[0]) < int(result_list[1]):
                 morocco_wins += 1
@@ -197,10 +196,9 @@ def contest(r, t):
                 morocco_points += 3
                 morocco_goal_difference += int(result_list[1]) - int(result_list[0])
                 portugal_goal_difference += int(result_list[0]) - int(result_list[1])
-                #list_result.remove(r[0])
                 t.remove(t[0])
 
-    point_list = [[spain_points, 1, 'Spine', spain_wins, spain_lose, spain_draws, spain_goal_difference],
+    point_list = [[spain_points, 1, 'Spain', spain_wins, spain_lose, spain_draws, spain_goal_difference],
                   [iran_points, 4, 'Iran', iran_wins, iran_lose, iran_draws, iran_goal_difference],
                   [portugal_points, 2, 'Portugal', portugal_wins, portugal_lose, portugal_draws, portugal_goal_difference],
                   [morocco_points, 3, 'Morocco', morocco_wins, morocco_lose, morocco_draws,morocco_goal_difference]

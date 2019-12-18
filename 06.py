@@ -15,7 +15,7 @@ list_jomles = []
 for i in range(looping):
     jomles = input()
     list_jomles.append(jomles.split(' '))
-for_translate = list_jomles.pop(4)
+for_translate = list_jomles.pop(3)
 bias = -1
 for translate in for_translate:
     bias += 1

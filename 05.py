@@ -2,11 +2,11 @@
 
 in_str = input()
 list_str = in_str.split('.')
-print(list_str)
+
 new_list_str = []
 for a in list_str:
     new_list_str.append(a.replace(',', ''))
-print(new_list_str)
+
 list_str2 = []
 list_str3 = []
 list_str4 = []
@@ -25,7 +25,7 @@ def x(l):
     for wl in l:
         for w in range(1, len(wl)):
             if wl[w].istitle():
-                print(f'{w + 1 + bias} : {wl[w]}')
+                print(f'{w + 1 + bias}:{wl[w]}')
                 none += 1
         bias += len(wl)
     if none == 0:

@@ -1,11 +1,20 @@
-from jalaali import Jalaali
-from datetime import date
-print(Jalaali.to_jalaali(2019,12,16))
+from Tkinter import *
+import tkFileDialog
 
-today = str(date.today()).split('-')
+import sys
+if sys.version_info[0] < 3:
+   import Tkinter as Tk
+else:
+   import tkinter as Tk
 
 
-today_jalali = Jalaali.to_jalaali(int(today[0]),int(today[1]),int(today[2]))
-print(today_jalali['jy'])
-print(int(today[0]))
+def browse_file():
+    fname = tkFileDialog.askopenfilename(filetypes = (("Template files", "*.type"), ("All files", "*")))
+    print (fname)
 
+    root = Tk.Tk()
+    root.wm_title("Browser")
+    broButton = Tk.Button(master = root, text = 'Browse', width = 6, command=browse_file)
+    broButton.pack(side=Tk.LEFT, padx = 2, pady=2)
+
+Tk.mainloop()

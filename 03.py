@@ -25,6 +25,7 @@ for i in person_like:
 
 only_genre.sort()
 genre_dice = Counter(only_genre).most_common()
+print(genre_dice)
 for chap in genre_dice:
     print(f'{chap[0]} : {chap[1]}')
 
