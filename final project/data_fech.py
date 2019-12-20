@@ -3,13 +3,12 @@ import re
 import requests
 import mysql.connector
 from jalaali import Jalaali
-from datetime import date,datetime
+from datetime import date, datetime
 start = datetime.now()
 
 
 today = str(date.today()).split('-')
 today_jalali = Jalaali.to_jalaali(int(today[0]), int(today[1]), int(today[2]))
-#x = today_jalali['jy']
 tehran = 420
 isfahan = 70
 alborz = 40
@@ -70,7 +69,7 @@ cnx = mysql.connector.connect(user='mejomba',
 cursor = cnx.cursor()
 
 '''initial parameter'''
-table_name = 'cars'
+table_name = 'car2'
 fields = ['name', 'work', 'price', 'pd', 'city', 'id', 'age']
 
 try:
@@ -83,10 +82,6 @@ except:
 
 class Data_fetch(object):
     def __init__(self):
-        pass
-
-    def search(self, search_input):
-        """get search query from user & search in google for find target URL"""
         pass
 
     def fetch_data(self):
@@ -320,7 +315,7 @@ class Data_fetch(object):
                                 print(f'insert into DB{self.record_counter}')
 
             else:
-                for i in range(1, 15):
+                for i in range(1, 20):
                     bama_url = f'{first_bama_url}&page={i}'
                     print(bama_url)
                     page_request = requests.get(bama_url)
